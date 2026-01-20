@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=M+PLUS+1+Code:wght@100..700&family=Source+Code+Pro:wght@200&display=swap');
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body
+{
+    background-color: black;
+    timeline-scope: --scroll-check , --scroll-three, --scroll-ml, --scroll-game, --scroll-web, --scroll-desktop, --scroll-me;
+
+}
+
+
+.night-sky {
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000; 
+    z-index: -999; 
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+span 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1), 0 0 0 8px rgba(255,255,255,0.1), 0 0 20px rgba(255,255,255,1);
+    animation: stars 3s linear infinite;
+    opacity: 0;
+}
+span:before
+{
+    background: linear-gradient(90deg, #fff,transparent);
+    content: '';
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 300px;
+    height: 1px;
+}
+
+span:nth-child(1)  { top: 10%; left: 80%; animation-delay: 0s;   animation-duration: 1s; }
+span:nth-child(2)  { top: 5%;  left: 40%; animation-delay: 0.2s; animation-duration: 2s; }
+span:nth-child(3)  { top: 40%; left: 90%; animation-delay: 0.4s; animation-duration: 1.5s; }
+span:nth-child(4)  { top: 20%; left: 60%; animation-delay: 0.6s; animation-duration: 2.5s; }
+span:nth-child(5)  { top: 60%; left: 100%; animation-delay: 0.8s; animation-duration: 1.2s; }
+span:nth-child(6)  { top: 30%; left: 20%; animation-delay: 1s;   animation-duration: 3s; }
+span:nth-child(7)  { top: 50%; left: 70%; animation-delay: 1.2s; animation-duration: 1.8s; }
+span:nth-child(8)  { top: 80%; left: 50%; animation-delay: 1.4s; animation-duration: 2.2s; }
+span:nth-child(9)  { top: 15%; left: 30%; animation-delay: 1.6s; animation-duration: 1.4s; }
+span:nth-child(10) { top: 70%; left: 10%; animation-delay: 1.8s; animation-duration: 2.8s; }
+
+
+#main
+{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-width: 500px;
+    font-size: 28px;
+}
+.second {
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+
+    view-timeline-name: --scroll-check;
+    view-timeline-axis: block;
+
+    border: 1px solid transparent;
+    position: relative;
+
+}
+.section div
+{
+    height: 100vh;
+    width: 98vw;
+    position: relative;
+}
+.section .ml
+{
+    view-timeline-name: --scroll-ml;
+    view-timeline-axis: block;
+}
+.section .game
+{
+    view-timeline-name: --scroll-game;
+    view-timeline-axis: block;
+}
+.section .web
+{
+    view-timeline-name: --scroll-web;
+    view-timeline-axis: block;
+}
+.section .desktop
+{
+    view-timeline-name: --scroll-desktop;
+    view-timeline-axis: block;
+}
+.section .me
+{
+    view-timeline-name: --scroll-me;
+    view-timeline-axis: block;
+}
+.three {
+    height: 100vh;
+    width: 98vw;
+    position: relative;
+
+    view-timeline-name: --scroll-three;
+    view-timeline-axis: block;
+}
+.cv
+{
+    container-type: inline-size;
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 240px;
+    max-width: 900px;
+    
+}
+.cv .Languages {
+    padding: 0px;
+    container-type: inline-size;
+    border-radius: 10px;
+    max-width: 550px;
+    width: 350px;
+    min-width: 250px;
+    color: white;
+    height: 60%;
+    text-align: left;
+    animation: linear animate-in-and-out-left;
+	animation-timeline: view();
+    font-size: clamp(0.8cqw , 1cqw + 0.5rem , 3cqw);
+}
+pre
+{
+    font-family: "Source Code Pro";
+    font-weight: 200;
+}
+.cv .Tools {
+    padding: 0px;
+    container-type: inline-size;
+    border-radius: 10px;
+    max-width: 550px;
+    width: 350px;
+    min-width: 250px;
+    color: white;
+    height: 60%;
+    text-align: left;
+    animation: linear animate-in-and-out-right;
+	animation-timeline: view();
+    font-size: clamp(0.8cqw , 1cqw + 0.5rem , 3cqw);
+}
+#main #MainText
+{
+    position: fixed;
+    width: 50%;
+    font-family: "Source Code Pro", sans-serif;
+    text-align: left;
+    right: 20%;
+    top: 40%;
+    transform: scale(1);
+
+    animation: scroll-down linear both;
+    animation-timeline: --scroll-check;
+
+    animation-range: entry 0% cover 40%;
+
+    z-index: 5;
+}
+#line
+{
+    margin-top: 3.3%;
+    width: 3%;  
+    min-width: 10px;       
+    height: 3.8cqw;
+    min-height: 25px;
+    background-color: white; 
+    animation: here-lost 1s steps(1) infinite;
+}
+#MainText h5
+{
+    font-family: "Source Code Pro", sans-serif;
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: clamp(1rem, 1cqw + 0.5rem, 2rem);
+}
+#MainText h2
+{
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(1.2rem, 5cqw + 0.5rem, 7rem);
+}
+#MainText h6
+{
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(0.5rem, 0.6cqw + 0.5rem, 1rem);
+
+    animation: hide-show linear both;
+    animation-timeline: --scroll-check;
+    animation-range: entry 0% exit 0%;
+
+}
+.flex
+{
+    position: fixed;
+    left: 0; 
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.down
+{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    position:absolute;
+    bottom: 2px;
+    left: 49.3%;
+    width: 64px;
+    height: 64px;
+}
+.down
+{
+    width: 32px;
+    margin: auto;
+    animation: down-up 1s infinite;
+}
+
+.diagram
+{
+    color: #D1D1D1;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "Source Code Pro", sans-serif;
+    font-size: clamp(1rem, 1cqw + 0.5rem, 2rem);
+    animation: hide-show reverse both;
+    animation-timeline: --scroll-three;
+
+    animation-range: entry 0% cover 60%;
+}
+
+.diagram-in {
+    position: relative; 
+    width: 50%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.diagram #me, #ml, #game, #web, #desktop {
+    position: absolute;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 10;
+    width: 210px;
+    text-align: center;
+    height: 30px;
+}
+
+#ml { 
+    top: 5%; 
+    left: 47%;
+    translate: -50% 0;
+
+    animation: ml linear both;
+    animation-timeline: --scroll-ml;
+    animation-range: entry 0% cover 60%;
+}
+
+#desktop {
+    left: 90%;
+    top: 47%;
+    translate: -50% 0;
+
+    animation: desktop linear both;
+    animation-timeline: --scroll-desktop;
+    animation-range: entry 0% cover 60%;
+}
+#web {
+    left: 12%; 
+    top: 47%;
+    translate: -50% 0;
+
+    animation: web linear both;
+    animation-timeline: --scroll-web;
+    animation-range: entry 0% cover 60%;
+}
+#game {
+    bottom: 5%; 
+    left: 50%;
+    translate: -50% 0;
+
+    animation: game linear both;
+    animation-timeline: --scroll-game;
+    animation-range: entry 0% cover 60%;
+}
+#me 
+{ 
+    top: 48%; 
+    left: 49.5%;
+    translate: -50% 0;
+
+    animation: hide-show reverse both;
+    animation-timeline: --scroll-me;
+    animation-range: entry 0% entry 60%;
+}
+
+.diagram img {
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+}
+
+
+
+@keyframes down-up 
+{
+ 0%
+ {
+    margin-bottom: 5px;
+ }   
+ 50%
+ {
+    margin-bottom: 10px;
+ } 
+ 100%
+ {
+    margin-bottom: 5px;
+ }   
+}
+
+@keyframes here-lost {
+0%, 100% {
+        opacity: 1;
+        visibility: visible;
+    }
+    50% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes animate-in-and-out-right {
+	entry 0%  {
+		opacity: 0; transform: translateX(100%);
+	}
+	entry 100%  {
+		opacity: 1; transform: translateX(0);
+	}
+
+	exit 0% {
+		opacity: 1; transform: translateX(0);
+	}
+	exit 100% {
+		opacity: 0; transform: translateX(100%);
+	}
+}
+
+@keyframes animate-in-and-out-left {
+	entry 0%  {
+		opacity: 0; transform: translateX(-100%);
+	}
+	entry 100%  {
+		opacity: 1; transform: translateX(0);
+	}
+
+	exit 0% {
+		opacity: 1; transform: translateX(0);
+	}
+	exit 100% {
+		opacity: 0; transform: translateX(-100%);
+	}
+}
+
+@keyframes scroll-down {
+    0% {
+        transform: scale(1);
+        right: 20%;
+        top: 40%;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        right: 60%;
+        top: 70%;
+        opacity: 0.8;
+    }
+}
+
+@keyframes hide-show {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes ml {
+	entry 0%  {
+		opacity: 0; translate: -50% -100%;
+    }
+	entry 100%  {
+		opacity: 1; translate: -50% 0%;
+	}
+}
+
+@keyframes game {
+	entry 0%  {
+		opacity: 0; translate: -50% 100%;
+    }
+	entry 100%  {
+		opacity: 1; translate: -50% 0%;
+	}
+}
+
+@keyframes web {
+	entry 0%  {
+		opacity: 0; translate: -100% 0%;
+    }
+	entry 100%  {
+		opacity: 1; translate: -50% 0%;
+	}
+}
+@keyframes desktop {
+	entry 0%  {
+		opacity: 0; translate: 100% 0%;
+    }
+	entry 100%  {
+		opacity: 1; translate: -50% 0%;
+	}
+}
+
+@keyframes stars {
+    0% { transform: rotate(315deg) translateX(0); opacity: 0; }
+    70% { opacity: 1; }
+    100% { transform: rotate(315deg) translateX(-1000px); opacity: 0; }
+}
+
+
