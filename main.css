@@ -6,14 +6,13 @@
 body::-webkit-scrollbar {
   display: none;
 }
-
 body
 {
     background-color: black;
+    overflow-x: hidden;
     timeline-scope: --scroll-check , --scroll-three, --scroll-ml, --scroll-game, --scroll-web, --scroll-desktop, --scroll-me;
 
 }
-
 
 .night-sky {
     position: fixed; 
@@ -67,26 +66,31 @@ span:nth-child(10) { top: 70%; left: 10%; animation-delay: 1.8s; animation-durat
 #main
 {
     color: white;
+    background-color:rgba(0, 128, 0, 0.267);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    min-width: 500px;
     font-size: 28px;
 }
 .second {
     height: 100vh;
-    width: 98vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-
+    
+    background-color: rgba(240, 255, 255, 0.267);
     view-timeline-name: --scroll-check;
     view-timeline-axis: block;
 
     border: 1px solid transparent;
-    position: relative;
+    position:static;
+    top: 0;
+    left:0;
+    padding:0;
+    margin: 0;
 
 }
 .section div
@@ -130,8 +134,8 @@ span:nth-child(10) { top: 70%; left: 10%; animation-delay: 1.8s; animation-durat
 }
 .cv
 {
-    container-type: inline-size;
-    width: 60vw;
+    container-type: inline-size; 
+    width: 90vw;
     height: 80vh;
     display: flex;
     justify-content: center;
@@ -141,18 +145,19 @@ span:nth-child(10) { top: 70%; left: 10%; animation-delay: 1.8s; animation-durat
     
 }
 .cv .Languages {
+    margin: 3%;
     padding: 0px;
     container-type: inline-size;
     border-radius: 10px;
     max-width: 550px;
-    width: 350px;
-    min-width: 250px;
+    width: 40%;
+    min-width: 180px;
     color: white;
     height: 60%;
     text-align: left;
     animation: linear animate-in-and-out-left;
 	animation-timeline: view();
-    font-size: clamp(0.8cqw , 1cqw + 0.5rem , 3cqw);
+    font-size: clamp(0.5cqw , 1cqw + 0.5rem , 2.5cqw);
 }
 pre
 {
@@ -160,18 +165,19 @@ pre
     font-weight: 200;
 }
 .cv .Tools {
+    margin: 3%;
     padding: 0px;
     container-type: inline-size;
     border-radius: 10px;
     max-width: 550px;
-    width: 350px;
-    min-width: 250px;
+    width: 40%;
+    min-width: 180px;
     color: white;
     height: 60%;
     text-align: left;
     animation: linear animate-in-and-out-right;
 	animation-timeline: view();
-    font-size: clamp(0.8cqw , 1cqw + 0.5rem , 3cqw);
+    font-size: clamp(0.5cqw , 1cqw + 0.5rem , 2.5cqw);
 }
 #main #MainText
 {
@@ -262,9 +268,12 @@ pre
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: 0px;
+    padding: 0;
+    top: 0;
+    left: 0;
     font-family: "Source Code Pro", sans-serif;
-    font-size: clamp(1rem, 1cqw + 0.5rem, 2rem);
+    font-size: clamp(0.3rem, 1cqw + 0.5rem, 2rem);
     animation: hide-show reverse both;
     animation-timeline: --scroll-three;
 
@@ -273,8 +282,8 @@ pre
 
 .diagram-in {
     position: relative; 
-    width: 50%;
-    height: 80%;
+    width: 60vw;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -286,7 +295,7 @@ pre
     margin: 0;
     white-space: nowrap;
     z-index: 10;
-    width: 210px;
+    width: 30%;
     text-align: center;
     height: 30px;
 }
@@ -303,7 +312,7 @@ pre
 
 #desktop {
     left: 90%;
-    top: 47%;
+    top: 47.5%;
     translate: -50% 0;
 
     animation: desktop linear both;
@@ -312,7 +321,7 @@ pre
 }
 #web {
     left: 12%; 
-    top: 47%;
+    top: 47.5%;
     translate: -50% 0;
 
     animation: web linear both;
@@ -340,10 +349,57 @@ pre
 }
 
 .diagram img {
-    width: 400px;
-    height: 400px;
+    width: 32vw;
+    height: 32vw;
     z-index: 1;
 }
+
+
+
+
+@media screen and (max-width: 480px) {
+
+    #main #MainText
+    {
+        position: fixed;
+        width: 50%;
+        font-family: "Source Code Pro", sans-serif;
+        text-align: left;
+        right: 50%;
+        top: 50%;
+        transform: scale(1);
+
+        animation: scroll-down linear both;
+        animation-timeline: --scroll-check;
+
+        animation-range: entry 0% cover 40%;
+
+        z-index: 5;
+    }
+
+    .diagram img {
+    width: 60vw;
+    height: auto;
+    z-index: 1;
+    }
+
+    .diagram-in {
+    position: relative; 
+    width: 98vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    @keyframes stars {
+        0% { transform: rotate(315deg) translateX(0); opacity: 0; }
+        100% { transform: rotate(315deg) translateX(-500px); opacity: 0; }
+    }
+
+}
+
 
 
 
