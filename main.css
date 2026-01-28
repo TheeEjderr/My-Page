@@ -58,7 +58,7 @@ body
     border-left: 3px solid #ffffff;
 }
 
-span 
+.night-sky span 
 {
     position: absolute;
     top: 50%;
@@ -71,7 +71,7 @@ span
     animation: stars 3s linear infinite;
     opacity: 0;
 }
-span:before
+.night-sky span:before
 {
     background: linear-gradient(90deg, #fff,transparent);
     content: '';
@@ -223,16 +223,16 @@ pre
 
     z-index: 5;
 }
-#line
-{
-    margin-top: 3.3%;
-    width: 3%;  
-    min-width: 10px;       
-    height: 3.8cqw;
-    min-height: 25px;
-    background-color: white; 
+#line {
+    width: 0.20em; 
+    min-width: unset;
+    height: 0.7em;   
+    margin-left: 0.15em;
+    background-color: white;
+
     animation: here-lost 1s steps(1) infinite;
 }
+
 #MainText h5
 {
     font-family: "Source Code Pro", sans-serif;
@@ -240,11 +240,20 @@ pre
     padding: 0px;
     font-size: clamp(1rem, 1cqw + 0.5rem, 2rem);
 }
-#MainText h2
-{
-    margin: 0px;
-    padding: 0px;
+#MainText h2 {
+    font-family: "Source Code Pro", monospace;
+    margin: 0;
+    padding: 0;
+
     font-size: clamp(1.2rem, 5cqw + 0.5rem, 7rem);
+    line-height: 1.2;
+
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;         
+}
+#MainText h2 .text {
+    display: inline-block;
 }
 #MainText h6
 {
@@ -596,7 +605,7 @@ pre
     100% {
         transform: scale(0.5);
         right: 60%;
-        top: 70%;
+        top: 80%;
         opacity: 0.8;
     }
 }
@@ -652,6 +661,5 @@ pre
     70% { opacity: 1; }
     100% { transform: rotate(315deg) translateX(-1000px); opacity: 0; }
 }
-
 
 
