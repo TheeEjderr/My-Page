@@ -124,7 +124,7 @@ span:nth-child(10) { top: 70%; left: 10%; animation-delay: 1.8s; animation-durat
 }
 .section div
 {
-    height: 100vh;
+    height: 60vh;
     width: 98vw;
     position: relative;
 }
@@ -652,5 +652,6 @@ pre
     70% { opacity: 1; }
     100% { transform: rotate(315deg) translateX(-1000px); opacity: 0; }
 }
+
 
 
