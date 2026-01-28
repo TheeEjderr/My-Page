@@ -28,6 +28,36 @@ body
     margin: 0;
     padding: 0;
 }
+
+.csv2 {
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Source Code Pro";
+    font-weight: 200;
+    color: #fff;
+    margin: auto;
+}
+
+.table
+{
+    width: 50%; 
+    font-size: clamp(0.6cqw, 0.8cqw, 1cqw);
+}
+
+.table h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.table .item {
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 3px solid #ffffff;
+}
+
 span 
 {
     position: absolute;
@@ -269,7 +299,7 @@ pre
     animation: hide-show reverse both;
     animation-timeline: --scroll-three;
 
-    animation-range: entry 0% cover 60%;
+    animation-range: entry 0% cover 80%;
 }
 
 .diagram-in {
@@ -367,6 +397,36 @@ pre
         animation-range: entry 0% cover 40%;
 
         z-index: 5;
+    }
+
+    .csv2 {
+        width: 80%;
+        height: 60vh;
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Source Code Pro";
+        font-weight: 200;
+        color: #fff;
+        margin: auto;
+    }
+    
+    .table
+    {
+        width: 50%; 
+        font-size: clamp(0.4cqw , 0.7cqw + 0.5rem , 2cqw);
+    }
+    
+    .table h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #fff;
+        
+    }
+    
+    .table .item {
+        margin-bottom: 8px;
+        padding-left: 10px;
+        border-left: 3px solid #ffffff;
     }
 
     .cv
