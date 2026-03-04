@@ -4,7 +4,9 @@ A clean and modern portfolio website built with HTML, CSS, and JavaScript.
 
 ## 🌐 Live Demo
 
-Check out the live website here: https://theeejderr.github.io/My-Page/
+If you want see this website...
+
+okey: https://theeejderr.github.io/My-Page/
 
 ## 📁 Project Structure
 
