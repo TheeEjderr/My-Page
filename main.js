@@ -1,4 +1,4 @@
-const brithDate = new Date(2008, 12, 4, 12, 0, 0);
+const brithDate = new Date(2007, 12, 4, 12, 0, 0);
 
 function updateAge()
 {
